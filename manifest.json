@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+
+  "name": "GradePoint - MyPlan",
+  "version": "1.1",
+  "description": "A browser extension that displays additional data for courses on MyPlan.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://myplan.uw.edu/*"],
+    "css": ["styles.css"],
+    "js": ["content2.js"]
+  }],
+  "icons": {
+    "16": "/icons/16.png",
+    "32": "/icons/32.png",
+    "48": "/icons/48.png",
+    "128": "/icons/128.png"
+  },
+  "host_permissions": ["https://bhpscfcsjsqqqtovmwfk.functions.supabase.co/*",
+    "https://myplan.uw.edu/*", "https://www.ratemyprofessors.com/*"]
+}
